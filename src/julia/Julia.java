@@ -17,13 +17,13 @@ public class Julia {
      */
     public static void main(String[] args) throws SQLException {
         
-        Customer c = new Customer(1, "Julia", "Soares", "s.julia@escolar.ifrn.edu.br", 1, 1);
+        Customer c = new Customer(1, "Julia", "Soares", "julia@microsoft.com", 10, 1);
         
         CustomerDAO dao = new CustomerDAO();
         
         dao.insertCustomer(c);
-        dao.updateCustomer(c);
-        dao.deleteCustomer(666);
+        dao.updateCustomer(611);
+        dao.deleteCustomer(610);
         dao.showCustomers();
         
     }

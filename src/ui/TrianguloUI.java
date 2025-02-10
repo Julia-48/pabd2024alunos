@@ -5,6 +5,7 @@
 package ui;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -207,22 +208,34 @@ public class TrianguloUI extends javax.swing.JFrame {
     }
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        double a = Double.parseDouble(aTF.getText());
-        double b = Double.parseDouble(bTF.getText());
-        double c = Double.parseDouble(cTF.getText());
         
-        if (isTriangle(a , b, c)){
-            tipoLabel.setText("TIPO = "+typeTriangle(a, b, c));
-            areaLabel.setText("ÁREA = "+areaTriangle(a, b, c));
-        } else{
-            tipoLabel.setText("NÃO é um triângulo");
-            tipoLabel.setForeground(Color.red);
-            areaLabel.setText("");
+        if (aTF.getText().equals("")
+                || bTF.getText().equals("")
+                || cTF.getText().equals("")) {
+            JOptionPane.showMessageDialog(
+                    null,
+                    "Preencha todos os lados!",
+                    "ERRO",
+                    //                JOptionPane.INFORMATION_MESSAGE
+                    //                JOptionPane.WARNING_MESSAGE
+                    JOptionPane.ERROR_MESSAGE
+            //                JOptionPane.QUESTION_MESSAGE
+            //                JOptionPane.PLAIN_MESSAGE
+            );
+        } else {
+            double a = Double.parseDouble(aTF.getText());
+            double b = Double.parseDouble(bTF.getText());
+            double c = Double.parseDouble(cTF.getText());
+
+            if (isTriangle(a, b, c)) {
+                tipoLabel.setText("Tipo = " + typeTriangle(a, b, c));
+                areaLabel.setText(String.format("Área = %.4f", areaTriangle(a, b, c)));
+            } else {
+                tipoLabel.setText("NÃO É um triângulo!");
+                tipoLabel.setForeground(Color.red);
+                areaLabel.setText("");
+            }
         }
-        
-        tipoLabel.setText("Calcule o tipo! "+a+" "+b+" "+c+"");
-        areaLabel.setText("Calcule a áre!");
-        
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -231,7 +244,12 @@ public class TrianguloUI extends javax.swing.JFrame {
     }//GEN-LAST:event_aTFActionPerformed
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-        
+        aTF.setText("");
+        bTF.setText("");
+        cTF.setText("");
+        tipoLabel.setText("Tipo de triângulo = ?");
+        tipoLabel.setForeground(Color.black);
+        areaLabel.setText("Área = ?");
     }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
