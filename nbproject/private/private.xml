@@ -2,6 +2,7 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group>
             <file>file:/C:/Users/20221074010054/OneDrive%20-%20IFRN/Projeto/src/projeto/ConnectionFactory.java</file>
             <file>file:/C:/Users/20221074010054/OneDrive%20-%20IFRN/Projeto/src/projeto/CustomerDAO.java</file>
@@ -12,5 +13,8 @@
             <file>file:/C:/Users/20221074010054/OneDrive%20-%20IFRN/Projeto/src/projeto/Projeto.java</file>
             <file>file:/C:/Users/20221074010054/OneDrive%20-%20IFRN/Projeto/src/ui1/SakilaUI.java</file>
         </group>
+=======
+        <group/>
+>>>>>>> f5373aa0a8cb6d18a38162f76cbc0a4676770d6f
     </open-files>
 </project-private>
